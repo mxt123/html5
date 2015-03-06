@@ -1,0 +1,15 @@
+h1
+{
+	color:red;
+	background: yellow;
+	border: 10px dashed blue;
+	width: 550px;
+	padding:5px;
+}
+
+a:hover
+{
+	background: yellow;
+}
+a:active {background: lime;}
+a:visited {background: aqua;}
