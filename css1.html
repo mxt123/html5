@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>"Start Page"</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="./toggle.js"></script>	
 </head>
 <body>
 	<a id="top" href="#btm">Skip to the end</a>
@@ -26,13 +27,33 @@
 20 GOTO 10
 		</code>
 	</pre>
-	<img src="./resources/Earl_of_Lemongrab.png" width="50" height="100" title="Unacceptable">
-	<a id="btm" href="#top">Skip to the start</a>
-</body>
+	<p>
+		<img id = "lemon" src="./resources/Earl_of_Lemongrab.png" width="auto" height="100" title="Unacceptable"
+		usemap="#search">
+		<map name="search">
+			<area shape="rect" coords="0,0,50,50" href="./meta.html" alt="meta" title="meta">
+			<area shape="rect" coords="0,50,50,100" href="./barebones.html" alt="barebones" title="barebones">
+		</map>
+	</p>	
+	<a id="btm" href="#top">Skip to the start</a><br>
+	<a href="javascript:toggle()">show/hide</a>
+	<br>
+
 	<p>
 		<ruby>
 		漢 <rt> ㄏㄢˋ </rt>
-		</ruby>
-		<a href="hyperlink" title="a hyperlink to return">return</a>
+		</ruby>	an
 	</p>	
+
+	<p>
+		<a href="hyperlink" title="a hyperlink to return">return</a>
+	</p>
+
+	<p class = "btn">
+		<a href="http://www.youtube.com">
+			<img src="./resources/alertIcon.png" alt="rollover" width = "192px" height="67px">
+		</a>
+	</p>
+
+</body>	
 </html>
