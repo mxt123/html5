@@ -29,18 +29,34 @@ function init()
 		ctx.fillRect(75,10,100,100);
 
 	 	circle(ctx,275,60,50);	 
-	 	
+
 	 	for(i=0;i<40;i++)
 	 	{
-	 		x = Math.floor(Math.random() * canvas.width) + 1	
-	 		y = Math.floor(Math.random() * canvas.height) + 1
-	 		size = Math.floor(Math.random() * 50) + 1
-	 		colour = colours[Math.floor(Math.random() * 4) ]
+	 		x = Math.floor(Math.random() * canvas.width); 	
+	 		y = Math.floor(Math.random() * canvas.height);
+	 		size = Math.floor(Math.random() * 50);
+	 		colour = colours[Math.floor(Math.random() * 4) ];
 	 		circle(ctx,x,y,size,colour);
 		}
 
 		triangle(ctx,375,110);		
 		triangle(ctx,0,210);
+
+	}
+
+	var canvas2=document.getElementById("canvas2");
+	if ( canvas2.getContext )
+	{
+		var ctx=canvas2.getContext("2d");
+	 		 
+	 	for(i=0;i<40;i++)
+	 	{
+	 		x = Math.floor(Math.random() * canvas2.width); 	
+	 		y = Math.floor(Math.random() * canvas2.height);
+	 		size = Math.floor(Math.random() * 50);
+	 		colour = colours[Math.floor(Math.random() * 4) ];
+	 		circle(ctx,x,y,size,colour);
+		}
 
 	}
 
