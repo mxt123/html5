@@ -23,6 +23,14 @@ function square(ctx,x,y,size,colour)
 	ctx.fillRect(x,y,x+size,y+size/10,colour);
 }
 
+
+function fullScreen(canvasId)
+{
+	var canvas=document.getElementById(canvasId);
+	canvas.width  = window.innerWidth;
+	canvas.height = window.innerHeight;
+}
+
 function drawShapes(numShapes,canvasId)
 {
 
@@ -49,7 +57,7 @@ function drawShapes(numShapes,canvasId)
 
 function init()
 {
-	drawShapes(10,"canvas");
-	drawShapes(50,"canvas2");
+	fullScreen("canvas");
+	drawShapes(50,"canvas");
 }
 onload=init;
