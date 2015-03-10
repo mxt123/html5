@@ -17,11 +17,17 @@ function circle(ctx,x,y,size,colour)
 	ctx.fill();
 }
 
+function square(ctx,x,y,size,colour)
+{
+	ctx.fillStyle=colour;
+	ctx.fillRect(x,y,x+size,y+size/10,colour);
+}
+
 function drawShapes(numShapes,canvasId)
 {
 
 	var colours = ["red", "yellow", "blue", "green"]
-	var shapeFunctions = [triangle,circle]
+	var shapeFunctions = [square,triangle,circle]
 
 	var canvas=document.getElementById(canvasId);
 	if ( canvas.getContext )
@@ -34,7 +40,7 @@ function drawShapes(numShapes,canvasId)
 	 		y = Math.floor(Math.random() * canvas.height);
 	 		size = Math.floor(Math.random() * 50);
 	 		colour = colours[Math.floor(Math.random() * 4) ];
-	 		shapeFunction = shapeFunctions[Math.floor(Math.random() * 2)]
+	 		shapeFunction = shapeFunctions[Math.floor(Math.random() * 3)]
 	 		shapeFunction(ctx,x,y,size,colour);
 		}
 
