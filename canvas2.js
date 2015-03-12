@@ -23,12 +23,13 @@ function square(ctx,x,y,size,colour)
 	ctx.fillRect(x,y,x+size,y+size/10,colour);
 }
 
-
 function fullScreen(canvasId)
 {
 	var canvas=document.getElementById(canvasId);
 	canvas.width  = window.innerWidth;
 	canvas.height = window.innerHeight;
+	var ctx=canvas.getContext("2d");
+	ctx.globalAlpha=0.5;
 }
 
 function drawShapes(numShapes,canvasId)
