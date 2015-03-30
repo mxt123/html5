@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>form 2</title>	
+</head>
+<body>
+	<form method="GET" action="http://10.0.1.230/cgi-bin/echo.pl">
+	<p>
+		<input type="submit" value="submit form">
+	</p>
+	<dl>
+		<dt>User Name :</dt>
+		<dd><input type="text" name ="Name"></dd>
+		<dt>Password : </dt>
+		<dd><input type="text" name ="Password"></dd>
+		<dt>City :</dt>
+		<dd><input type="text" name ="City"></dd>
+		<dt>Area :</dt>
+		<dd><input type="text" name ="Area" value="downtown" disabled></dd>
+		<dt>State :</dt>
+		<dd><input type="text" name ="State" value="Texas" readonly></dd>
+		<dt>Zip :</dt>
+		<dd><input type="text" name ="Zip" size="5" maxlength="5"></dd>		
+	</dl>
+	</form>
+
+	<form method="POST" action="http://10.0.1.230/cgi-bin/echo.pl">
+	<textarea name ="blah" rows="10" cols="65">			
+	</textarea>
+	<p>
+		<input type="submit" value="submit form">
+	</p>	
+	</form>
+
+	<form method="GET" action="http://10.0.1.230/cgi-bin/echo.pl">
+	<p>Yes, I like checkboxes<input type="checkbox" name="I like check boxes" value="checkboxlike" checked></p>
+	<fieldset>
+		<legend>checkboxen</legend>
+		boxlike1<input type="checkbox" name="boxlike1" value="boxlike1" checked></p>
+		boxlike2<input type="checkbox" name="boxlike2" value="boxlike2" checked></p>
+		boxlike3<input type="checkbox" name="boxlike3" value="boxlike3" checked></p>
+	</fieldset>
+	<fieldset>
+		<legend>radio</legend>
+		radio1<input type="radio" name="definition" value="radio1"><br/>
+		radio2<input type="radio" name="definition" value="radio2"><br/>
+		radio3<input type="radio" name="definition" value="radio3"><br/>
+	</fieldset>	
+	<p><input type="submit" value="submit form"></p>	
+	</form> 
+
+</body>
+</html>
